@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="WarnetClient.Views.ModernTimeCounter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WarnetClient"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="120">
+				<StackPanel Margin="2,0" Orientation="Horizontal">
+								<Grid Margin="2">
+												<Label x:Name="hoursText" Margin="4,0" Content="00" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="White">
+																<Label.Effect>
+																				<BlurEffect x:Name="hoursTextBlur" KernelType="Box" Radius="0"/>
+																</Label.Effect>
+																<Label.RenderTransform>
+																				<TranslateTransform x:Name="hoursTextTranslate" />
+																</Label.RenderTransform>
+												</Label>
+												<Label x:Name="hoursTextFake" Visibility="Hidden" Margin="4,0" Content="00" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="White">
+																<Label.Effect>
+																				<BlurEffect x:Name="hoursTextFakeBlur" KernelType="Box" Radius="0"/>
+																</Label.Effect>
+																<Label.RenderTransform>
+																				<TranslateTransform x:Name="hoursTextFakeTranslate" />
+																</Label.RenderTransform>
+												</Label>
+								</Grid>
+								<Label Padding="0" Content=":" VerticalAlignment="Center" FontSize="20" Foreground="White" />
+								<Grid Margin="2">
+												<Label x:Name="minutesText" Margin="4,0" Content="00" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="White">
+																<Label.Effect>
+																				<BlurEffect x:Name="minutesTextBlur" KernelType="Box" Radius="0"/>
+																</Label.Effect>
+																<Label.RenderTransform>
+																				<TranslateTransform x:Name="minutesTextTranslate" />
+																</Label.RenderTransform>
+												</Label>
+												<Label x:Name="minutesTextFake" Visibility="Hidden" Margin="4,0" Content="00" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="White">
+																<Label.Effect>
+																				<BlurEffect x:Name="minutesTextFakeBlur" KernelType="Box" Radius="0"/>
+																</Label.Effect>
+																<Label.RenderTransform>
+																				<TranslateTransform x:Name="minutesTextFakeTranslate" />
+																</Label.RenderTransform>
+												</Label>
+								</Grid>
+								<Label Padding="0" Content=":" VerticalAlignment="Center" FontSize="20" Foreground="White" />
+								<Grid Margin="2">
+												<Label x:Name="secondsText" Margin="4,0" Content="00" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="White">
+                <Label.Effect>
+                    <BlurEffect x:Name="secondsTextBlur" KernelType="Box" Radius="0"/>
+                </Label.Effect>
+                <Label.RenderTransform>
+																				<TranslateTransform x:Name="secondsTextTranslate" />
+																</Label.RenderTransform>
+												</Label>
+												<Label x:Name="secondsTextFake" Visibility="Hidden" Margin="4,0" Content="00" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="White">
+																<Label.Effect>
+																				<BlurEffect x:Name="secondsTextFakeBlur" KernelType="Box" Radius="0"/>
+																</Label.Effect>
+																<Label.RenderTransform>
+																				<TranslateTransform x:Name="secondsTextFakeTranslate" />
+																</Label.RenderTransform>
+												</Label>
+								</Grid>
+				</StackPanel>
+</UserControl>

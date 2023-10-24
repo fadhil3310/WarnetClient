@@ -1,0 +1,70 @@
+﻿<Window x:Class="WarnetClient.Overlays.OverlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WarnetClient"
+								xmlns:overlay="clr-namespace:WarnetClient.Overlays" 
+								xmlns:ui="http://schemas.modernwpf.com/2019"
+								mc:Ignorable="d"
+								x:Name="RootWindow"
+								Topmost="True"
+								WindowStyle="None"
+								Background="Transparent"
+								AllowsTransparency="True"
+								ShowInTaskbar="False"
+								Top="0"
+								Left="0"
+        Title="TimeOverlay" Height="80" Width="1366">
+				<Grid>
+								<Grid x:Name="OverlayRoot" Margin="8,8,8,8" Width="290">
+												<Grid.RenderTransform>
+																<TranslateTransform x:Name="OverlayRoot_Translate" />
+												</Grid.RenderTransform>
+
+												<Rectangle x:Name="OverlayBackground" RadiusX="8" RadiusY="8" Stroke="#3FFFFFFF">
+																<Rectangle.Fill>
+																				<SolidColorBrush x:Name="OverlayBackgroundBrush" Color="#FF191919" />
+																</Rectangle.Fill>
+																<Rectangle.Effect>
+																				<DropShadowEffect Color="#19000000" Direction="-90" BlurRadius="8"/>
+																</Rectangle.Effect>
+												</Rectangle>
+												<Canvas
+																x:Name="OverlayMessage"
+																Height="64"
+																ClipToBounds="True"
+																Visibility="Collapsed">
+																<Label MouseDown="Label_MouseDown" Foreground="White" VerticalAlignment="Top" Canvas.Left="10" Canvas.Top="19" FontSize="20" HorizontalAlignment="Center">Komputer 022222222222222222222222222222221</Label>
+												</Canvas>
+												<overlay:TimeCounterOverlayItem x:Name="OverlayTimeCounter" />
+								</Grid>
+								<Grid x:Name="UnminimizeRoot"
+														Width="40" Height="50"
+														Background="#02000000"
+														MouseEnter="UnminimizeRoot_MouseEnter"
+														MouseLeave="UnminimizeRoot_MouseLeave">
+												<Button x:Name="UnminimizeButton"
+																				Width="40" Height="50"
+																				Click="UnminimizeButton_Click">
+																<Button.Background>
+																				<RadialGradientBrush GradientOrigin="0.5,0" MappingMode="RelativeToBoundingBox">
+																								<GradientStop Color="Black"/>
+																								<GradientStop Color="#00000000" Offset="1"/>
+																				</RadialGradientBrush>
+																</Button.Background>
+																<Button.RenderTransform>
+																				<TranslateTransform x:Name="UnminimizeButton_Translate" Y="-60" />
+																</Button.RenderTransform>
+
+																<ui:SymbolIcon Symbol="Download" Foreground="#FFE2E2E2" >
+																				<ui:SymbolIcon.LayoutTransform>
+																								<TransformGroup>
+																												<ScaleTransform ScaleX="0.75" ScaleY="0.75" />
+																								</TransformGroup>
+																				</ui:SymbolIcon.LayoutTransform>
+																</ui:SymbolIcon>
+												</Button>
+								</Grid>
+				</Grid>
+</Window>
