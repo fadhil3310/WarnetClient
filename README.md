@@ -1,4 +1,5 @@
 # WarnetClient
 
-Aplikasi untuk Warnet bagian Client. Belum jadi
+Aplikasi untuk Warnet bagian Client. Belum jadi.
+
 Bagian Server menyusul.
