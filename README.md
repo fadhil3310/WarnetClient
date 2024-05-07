@@ -1,3 +1,5 @@
+*** **Repo diarchive, projek akan dimigrate ke Avalonia di repo baru** ***
+
 # WarnetClient
 
 Aplikasi untuk Warnet bagian Client. Belum jadi.
